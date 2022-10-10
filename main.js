@@ -4,6 +4,7 @@ function addNewEvent() {
 
     if (text.length === 0) {
         alert("digite algo");
+        document.getElementById("task_name").focus();
         return;
     }
 
@@ -14,5 +15,10 @@ function addNewEvent() {
     listItem.appendChild(textElement);
     list.appendChild(listItem);
 
-
+    document.getElementById("task_name").value = '';
+    document.getElementById("task_name").focus();
 }
+
+(function () {
+    document.getElementById("task_name").focus();
+})();
